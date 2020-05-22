@@ -106,6 +106,7 @@ RUN set -x && \
                     wget \
                     whois \
                     xmlstarlet \
+                    unzip \
                     && \
     \
 ### Install MariaDB ODBC Connector
@@ -213,6 +214,9 @@ RUN set -x && \
     ln -s /data/var/spool/asterisk /var/spool/asterisk && \
     rm -rf /etc/asterisk && \
     ln -s /data/etc/asterisk /etc/asterisk
+
+
+ADD  ${FREEPBX_VERSION} /
 
 ### Networking Configuration
 EXPOSE 80 443 4445 4569 5060/udp 5160/udp 5061 5161 8001 8003 8008 8009 18000-20000/udp
