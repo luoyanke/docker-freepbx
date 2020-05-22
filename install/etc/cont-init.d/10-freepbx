@@ -88,7 +88,7 @@ EOF
     cd /usr/src
    # mkdir -p /usr/src/freepbx
    # curl -ssL https://github.com/FreePBX/framework/archive/release/${FREEPBX_VERSION}.tar.gz| tar xfz - --strip 1 -C /usr/src/freepbx
-    unzip  /{FREEPBX_VERSION}.zip -d /usr/src/freepbx
+    unzip  /${FREEPBX_VERSION}.zip -d /usr/src/freepbx
     silent sudo -u asterisk gpg --refresh-keys --keyserver hkp://keyserver.ubuntu.com:80
     silent sudo -u asterisk gpg --import /usr/src/freepbx/amp_conf/htdocs/admin/libraries/BMO/9F9169F4B33B4659.key
     silent sudo -u asterisk gpg --import /usr/src/freepbx/amp_conf/htdocs/admin/libraries/BMO/3DDB2122FE6D84F7.key
